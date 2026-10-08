@@ -7,334 +7,906 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="/css/chatbot_widget.css">
     <link rel="stylesheet" href="/css/feedback-prompt.css">
+
     <link rel="shortcut icon" href="/images/bee_logo.png" type="image/x-icon">
+
     <title>BudgetBasics</title>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+    <!-- ================= HEADER ================= -->
 
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <header>
+
+        <nav>
+
+            <h1 class="nav-logo">
+                <strong>Budget</strong>basics
+            </h1>
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
                 <i class="fa-solid fa-bars"></i>
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#learning-modules">Tools</a></li>
-                <li><a href="#about">About</a></li>
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#learning-modules">Tools</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
                 <li class="nav-search-item">
+
                     <form class="search-form" role="search" id="searchForm">
-                        <button type="submit" class="search-btn" aria-label="Search">
+
+                        <button
+                            type="submit"
+                            class="search-btn"
+                            aria-label="Search"
+                        >
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input type="text" id="searchInput" placeholder="Search budgeting tips..." aria-label="Search">
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search budgeting tips..."
+                            aria-label="Search"
+                        >
+
                     </form>
+
                 </li>
+
             </ul>
+
         </nav>
 
         <div class="nav-backdrop" id="navBackdrop"></div>
 
+        <!-- Welcome Banner -->
+
         <div class="banner" id="banner">
-            <span class="banner-text">welcome to budget basics</span>
-            <button class="banner-toggle" id="bannerToggle" aria-label="Collapse welcome banner" aria-expanded="true">
+
+            <span class="banner-text">
+                welcome to budget basics
+            </span>
+
+            <button
+                class="banner-toggle"
+                id="bannerToggle"
+                aria-label="Collapse welcome banner"
+                aria-expanded="true"
+            >
                 <i class="fa-solid fa-chevron-up"></i>
             </button>
+
         </div>
+
+        <!-- ================= HERO ================= -->
 
         <main>
+
             <div class="hero-content">
+
                 <aside class="hero-copy">
-                    <h2>Your money has plan <strong>Do you?</strong></h2>
-                    <p>A financial webiste built to help you save money. <span>Earn more by spending less</span></p>
+
+                    <h2>
+                        Your money has plan
+                        <strong>Do you?</strong>
+                    </h2>
+
+                    <p>
+                        A financial webiste built to help you save money.
+                        <span>Earn more by spending less</span>
+                    </p>
+
                     <button class="cta">
+
                         start learning
+
                         <i class="fa-solid fa-arrow-right"></i>
+
                     </button>
+
                 </aside>
+
                 <aside class="hero-image">
-                    <img src="/images/money illustration.jpg" alt="a fun visual representation of money working">
+
+                    <img
+                        src="/images/money illustration.jpg"
+                        alt="a fun visual representation of money working"
+                    >
+
                 </aside>
+
             </div>
+
         </main>
+
     </header>
 
+
+    <!-- ================= FINANCIAL SNAPSHOT ================= -->
+
     <section class="fs-section">
+
         <div id="financial-snapshot-widget">
+
             <!-- 1. Top Snapshot Section -->
+
             <div class="fs-header">
-                <span class="fs-header-icon"><i class="fa-solid fa-chart-pie"></i></span>
+
+                <span class="fs-header-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
                 <div>
-                    <h3 class="fs-title">Financial snapshot</h3>
-                    <p class="fs-subtitle">A quick example of how money is being saved </p>
+
+                    <h3 class="fs-title">
+                        Financial snapshot
+                    </h3>
+
+                    <p class="fs-subtitle">
+                        A quick example of how money is being saved
+                    </p>
+
                 </div>
+
             </div>
+
 
             <div class="fs-cards-row reveal">
+
+                <!-- Income -->
+
                 <div class="fs-card fs-income-card">
-                    <div class="fs-icon-badge fs-icon-blue"><i class="fa-solid fa-sack-dollar"></i></div>
-                    <div class="fs-details">
-                        <div class="fs-amount">₦100k</div>
-                        <div class="fs-label">Income</div>
+
+                    <div class="fs-icon-badge fs-icon-blue">
+                        <i class="fa-solid fa-sack-dollar"></i>
                     </div>
+
+                    <div class="fs-details">
+
+                        <div class="fs-amount">
+                            ₦100k
+                        </div>
+
+                        <div class="fs-label">
+                            Income
+                        </div>
+
+                    </div>
+
                 </div>
+
+
+                <!-- Planned Spend -->
 
                 <div class="fs-card fs-spend-card">
+
                     <div class="fs-spend-header">
-                        <div class="fs-icon-badge fs-icon-green"><i class="fa-solid fa-wallet"></i></div>
-                        <div class="fs-details">
-                            <div class="fs-amount">₦75k</div>
-                            <div class="fs-label-dark">Planned spend</div>
+
+                        <div class="fs-icon-badge fs-icon-green">
+                            <i class="fa-solid fa-wallet"></i>
                         </div>
+
+                        <div class="fs-details">
+
+                            <div class="fs-amount">
+                                ₦75k
+                            </div>
+
+                            <div class="fs-label-dark">
+                                Planned spend
+                            </div>
+
+                        </div>
+
                     </div>
+
 
                     <div class="fs-progress-container">
-                        <div class="fs-progress-bar fs-bg-green-dark" data-width="30%"></div>
-                        <div class="fs-progress-bar fs-bg-green-light" data-width="35%"></div>
-                        <div class="fs-progress-bar fs-bg-yellow" data-width="20%"></div>
-                        <div class="fs-progress-bar fs-bg-light-green" data-width="10%"></div>
-                        <div class="fs-progress-bar fs-bg-gray" data-width="5%"></div>
+
+                        <div
+                            class="fs-progress-bar fs-bg-green-dark"
+                            data-width="30%"
+                        ></div>
+
+                        <div
+                            class="fs-progress-bar fs-bg-green-light"
+                            data-width="35%"
+                        ></div>
+
+                        <div
+                            class="fs-progress-bar fs-bg-yellow"
+                            data-width="20%"
+                        ></div>
+
+                        <div
+                            class="fs-progress-bar fs-bg-light-green"
+                            data-width="10%"
+                        ></div>
+
+                        <div
+                            class="fs-progress-bar fs-bg-gray"
+                            data-width="5%"
+                        ></div>
+
                     </div>
+
 
                     <ul class="fs-spend-list">
+
                         <li>
-                            <div class="fs-list-left"><span class="fs-dot fs-dot-green"></span> Transport</div>
-                            <div class="fs-list-right">₦20k</div>
+
+                            <div class="fs-list-left">
+                                <span class="fs-dot fs-dot-green"></span>
+                                Transport
+                            </div>
+
+                            <div class="fs-list-right">
+                                ₦20k
+                            </div>
+
                         </li>
+
                         <li>
-                            <div class="fs-list-left"><span class="fs-dot fs-dot-green-light"></span> Food</div>
-                            <div class="fs-list-right">₦25k</div>
+
+                            <div class="fs-list-left">
+                                <span class="fs-dot fs-dot-green-light"></span>
+                                Food
+                            </div>
+
+                            <div class="fs-list-right">
+                                ₦25k
+                            </div>
+
                         </li>
+
                         <li>
-                            <div class="fs-list-left"><span class="fs-dot fs-dot-yellow"></span> Other</div>
-                            <div class="fs-list-right">₦10k</div>
+
+                            <div class="fs-list-left">
+                                <span class="fs-dot fs-dot-yellow"></span>
+                                Other
+                            </div>
+
+                            <div class="fs-list-right">
+                                ₦10k
+                            </div>
+
                         </li>
+
                     </ul>
-                    <p class="fs-footnote">Breakdown of your ₦75k planned spend across transport, food and other categories.</p>
+
+                    <p class="fs-footnote">
+                        Breakdown of your ₦75k planned spend across transport,
+                        food and other categories.
+                    </p>
+
                 </div>
+
+
+                <!-- Left Over -->
 
                 <div class="fs-card fs-leftover-card">
-                    <div class="fs-icon-badge fs-icon-yellow"><i class="fa-solid fa-piggy-bank"></i></div>
-                    <div class="fs-details">
-                        <div class="fs-amount">₦5k</div>
-                        <div class="fs-label-dark">Left over</div>
+
+                    <div class="fs-icon-badge fs-icon-yellow">
+                        <i class="fa-solid fa-piggy-bank"></i>
                     </div>
+
+                    <div class="fs-details">
+
+                        <div class="fs-amount">
+                            ₦5k
+                        </div>
+
+                        <div class="fs-label-dark">
+                            Left over
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
 
             <!-- 2. Talking Bee Section -->
+
             <div class="fs-bee-section reveal">
+
                 <div class="fs-speech-bubble">
-                    You want to start making savings?<br>Check out the tools we have for you!
+
+                    You want to start making savings?
+                    <br>
+                    Check out the tools we have for you!
+
                 </div>
-                <img src="/images/bee_logo.png" alt="Bee" class="fs-bee-img" onerror="this.outerHTML='<i class=\'fa-solid fa-bug fs-bee-fallback-icon\'></i>'">
+
+                <img
+                    src="/images/bee_logo.png"
+                    alt="Bee"
+                    class="fs-bee-img"
+                    onerror="this.outerHTML='<i class=\'fa-solid fa-bug fs-bee-fallback-icon\'></i>'"
+                >
+
             </div>
+
 
             <!-- 3. Learning Cards Section -->
-            <div class="lc-section reveal" id="learning-modules">
-                <!-- Different styling for the header -->
+
+            <div
+                class="lc-section reveal"
+                id="learning-modules"
+            >
+
+                <!-- Learning Cards Header -->
+
                 <div class="lc-header">
-                    <span class="lc-header-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+
+                    <span class="lc-header-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+
                     <div>
-                        <h3 class="lc-title">Learning cards</h3>
-                        <p class="lc-subtitle">Expand your financial knowledge with our guides</p>
+
+                        <h3 class="lc-title">
+                            Learning cards
+                        </h3>
+
+                        <p class="lc-subtitle">
+                            Expand your financial knowledge with our guides
+                        </p>
+
                     </div>
+
                 </div>
+
+
+                <!-- ================= LEARNING CARDS ================= -->
 
                 <div class="lc-grid">
-                    <!-- Card 1 -->
-                    <a href="budgetting_basic.html" class="lc-card" data-keywords="budgeting basics budget income expenses plan planning fixed variable">
+
+
+                    <!-- Card 1: Budgeting Basics -->
+
+                    <a
+                        href="/html/budgeting_basic.html"
+                        class="lc-card"
+                        data-keywords="budgeting basics budget income expenses plan planning fixed variable"
+                    >
+
                         <div class="lc-image-wrapper">
-                            <img src="/images/budget_basics_card.jpg" alt="Budgeting Basics" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'">
+
+                            <img
+                                src="/images/budget_basics_card.jpg"
+                                alt="Budgeting Basics"
+                                onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'"
+                            >
+
                             <div class="lc-hover-overlay">
-                                <span class="lc-hover-text">Click to read more</span>
+
+                                <span class="lc-hover-text">
+                                    Click to read more
+                                </span>
+
                             </div>
+
                         </div>
+
+
                         <div class="lc-content">
+
                             <div class="lc-text">
-                                <h4>BUDGETING BASICS</h4>
-                                <p>Prescriptive financial budgeting basics.</p>
+
+                                <h4>
+                                    BUDGETING BASICS
+                                </h4>
+
+                                <p>
+                                    Prescriptive financial budgeting basics.
+                                </p>
+
                             </div>
+
                             <div class="lc-arrow">
+
                                 <i class="fa-solid fa-arrow-right"></i>
+
                             </div>
+
                         </div>
+
                     </a>
-                    
-                    <!-- Card 2 -->
-                    <a href="needs-vs-want.html" class="lc-card" data-keywords="needs wants need want essential necessity spending">
+
+
+                    <!-- Card 2: Needs vs Wants -->
+
+                    <a
+                        href="/html/needs-vs-want.html"
+                        class="lc-card"
+                        data-keywords="needs wants need want essential necessity spending"
+                    >
+
                         <div class="lc-image-wrapper">
-                            <img src="/images/need_vs_want_card.jpg" alt="Needs vs Wants" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'">
+
+                            <img
+                                src="/images/need_vs_want_card.jpg"
+                                alt="Needs vs Wants"
+                                onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'"
+                            >
+
                             <div class="lc-hover-overlay">
-                                <span class="lc-hover-text">Click to read more</span>
+
+                                <span class="lc-hover-text">
+                                    Click to read more
+                                </span>
+
                             </div>
+
                         </div>
+
+
                         <div class="lc-content">
+
                             <div class="lc-text">
-                                <h4>NEEDS vs WANTS</h4>
-                                <p>What are your critical wants, needs and wants.</p>
+
+                                <h4>
+                                    NEEDS vs WANTS
+                                </h4>
+
+                                <p>
+                                    What are your critical wants, needs and wants.
+                                </p>
+
                             </div>
+
                             <div class="lc-arrow">
+
                                 <i class="fa-solid fa-arrow-right"></i>
+
                             </div>
+
                         </div>
+
                     </a>
-                    
-                    <!-- Card 3 -->
-                    <a href="50-30-20rule.html" class="lc-card" data-keywords="50-30-20 rule split percent percentage savings save saving goal">
+
+
+                    <!-- Card 3: 50-30-20 Rule -->
+
+                    <a
+                        href="/html/50-30-20rule.html"
+                        class="lc-card"
+                        data-keywords="50-30-20 rule split percent percentage savings save saving goal"
+                    >
+
                         <div class="lc-image-wrapper">
-                            <img src="/images/card_50-30-20_rule.jpg" alt="50-30-20 Rule" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'">
+
+                            <img
+                                src="/images/card_50-30-20_rule.jpg"
+                                alt="50-30-20 Rule"
+                                onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'"
+                            >
+
                             <div class="lc-hover-overlay">
-                                <span class="lc-hover-text">Click to read more</span>
+
+                                <span class="lc-hover-text">
+                                    Click to read more
+                                </span>
+
                             </div>
+
                         </div>
+
+
                         <div class="lc-content">
+
                             <div class="lc-text">
-                                <h4>50-30-20 RULE</h4>
-                                <p>This rule makes saving easy!</p>
+
+                                <h4>
+                                    50-30-20 RULE
+                                </h4>
+
+                                <p>
+                                    This rule makes saving easy!
+                                </p>
+
                             </div>
+
                             <div class="lc-arrow">
+
                                 <i class="fa-solid fa-arrow-right"></i>
+
                             </div>
+
                         </div>
+
                     </a>
-                    
-                    <!-- Card 4 -->
-                    <a href="money-mistakes.html" class="lc-card" data-keywords="mistakes mistake overspending impulse buying subscriptions late payment">
+
+
+                    <!-- Card 4: Money Mistakes -->
+
+                    <a
+                        href="/html/money-mistakes.html"
+                        class="lc-card"
+                        data-keywords="mistakes mistake overspending impulse buying subscriptions late payment"
+                    >
+
                         <div class="lc-image-wrapper">
-                            <img src="/images/money_mistakes_card.jpg" alt="Money Mistakes" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'">
+
+                            <img
+                                src="/images/money_mistakes_card.jpg"
+                                alt="Money Mistakes"
+                                onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'"
+                            >
+
                             <div class="lc-hover-overlay">
-                                <span class="lc-hover-text">Click to read more</span>
+
+                                <span class="lc-hover-text">
+                                    Click to read more
+                                </span>
+
                             </div>
+
                         </div>
+
+
                         <div class="lc-content">
+
                             <div class="lc-text">
-                                <h4>MONEY MISTAKES</h4>
-                                <p>Presents information on money mistakes.</p>
+
+                                <h4>
+                                    MONEY MISTAKES
+                                </h4>
+
+                                <p>
+                                    Presents information on money mistakes.
+                                </p>
+
                             </div>
+
                             <div class="lc-arrow">
+
                                 <i class="fa-solid fa-arrow-right"></i>
+
                             </div>
+
                         </div>
+
                     </a>
-                    
-                    <!-- Card 5 (Centered at bottom) -->
-                    <a href="infographics.html" class="lc-card lc-card-centered" data-keywords="infographics visual gallery charts learning">
+
+
+                    <!-- Card 5: Infographics -->
+
+                    <a
+                        href="/html/infographics.html"
+                        class="lc-card lc-card-centered"
+                        data-keywords="infographics visual gallery charts learning"
+                    >
+
                         <div class="lc-image-wrapper">
-                            <img src="/images/info-graphics_card.jpg" alt="Infographics" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'">
+
+                            <img
+                                src="/images/info-graphics_card.jpg"
+                                alt="Infographics"
+                                onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Your+Image+Here'"
+                            >
+
                             <div class="lc-hover-overlay">
-                                <span class="lc-hover-text">Click to read more</span>
+
+                                <span class="lc-hover-text">
+                                    Click to read more
+                                </span>
+
                             </div>
+
                         </div>
+
+
                         <div class="lc-content">
+
                             <div class="lc-text">
-                                <h4>INFO-GRAPHICS</h4>
-                                <p>Learn more about info-to-infographics.</p>
+
+                                <h4>
+                                    INFO-GRAPHICS
+                                </h4>
+
+                                <p>
+                                    Learn more about info-to-infographics.
+                                </p>
+
                             </div>
+
                             <div class="lc-arrow">
+
                                 <i class="fa-solid fa-arrow-right"></i>
+
                             </div>
+
                         </div>
+
                     </a>
+
+
                 </div>
 
-                <p class="lc-no-results" id="lcNoResults" hidden>No matching guides found — try a different keyword, like "savings" or "budget".</p>
-            </div>
-    </section>
 
-    <!-- About Us Section -->
-    <section class="about-section" id="about">
-        <div class="about-container reveal">
-            <h2 class="about-heading">About us</h2>
-            
-            <div class="about-text-content">
-                <p>
-                    <strong>BudgetBasics</strong> is a student-focused financial learning platform designed to make understanding money simple, practical, and interactive. We help students learn the basics of budgeting, saving, managing expenses, and making smarter everyday financial decisions through simple lessons, interactive activities, and hands-on tools.
+                <p
+                    class="lc-no-results"
+                    id="lcNoResults"
+                    hidden
+                >
+                    No matching guides found — try a different keyword,
+                    like "savings" or "budget".
                 </p>
-                <p>
-                    From learning the difference between needs and wants to planning expenses and setting savings goals, <strong>BudgetBasics</strong> turns financial concepts into practical skills you can use in everyday life.
-                </p>
-                <p class="about-tagline">
-                    Learn. Try. Understand. Apply.
-                </p>
-                <p class="about-disclaimer">
-                    <strong>BudgetBasics</strong> is an educational project and is not intended to provide professional financial advice.
-                </p>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Footer Section -->
+
+    <!-- ================= ABOUT US ================= -->
+
+    <section
+        class="about-section"
+        id="about"
+    >
+
+        <div class="about-container reveal">
+
+            <h2 class="about-heading">
+                About us
+            </h2>
+
+
+            <div class="about-text-content">
+
+                <p>
+
+                    <strong>BudgetBasics</strong>
+                    is a student-focused financial learning platform
+                    designed to make understanding money simple, practical,
+                    and interactive. We help students learn the basics of
+                    budgeting, saving, managing expenses, and making smarter
+                    everyday financial decisions through simple lessons,
+                    interactive activities, and hands-on tools.
+
+                </p>
+
+
+                <p>
+
+                    From learning the difference between needs and wants
+                    to planning expenses and setting savings goals,
+                    <strong>BudgetBasics</strong>
+                    turns financial concepts into practical skills you can
+                    use in everyday life.
+
+                </p>
+
+
+                <p class="about-tagline">
+
+                    Learn. Try. Understand. Apply.
+
+                </p>
+
+
+                <p class="about-disclaimer">
+
+                    <strong>BudgetBasics</strong>
+                    is an educational project and is not intended to provide
+                    professional financial advice.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <footer class="site-footer">
+
         <div class="footer-container">
+
             <div class="footer-grid reveal">
+
+
                 <!-- Column 1: Sitemap -->
+
                 <div class="footer-col">
-                    <h4>Sitemap</h4>
+
+                    <h4>
+                        Sitemap
+                    </h4>
+
                     <ul>
-                        <li><a href="#">Learn</a></li>
-                        <li><a href="#">Try</a></li>
-                        <li><a href="#">Understand</a></li>
-                        <li><a href="#">Apply</a></li>
+
+                        <li>
+                            <a href="#">Learn</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Try</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Understand</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Apply</a>
+                        </li>
+
                     </ul>
+
                 </div>
+
 
                 <!-- Column 2: Explore More -->
+
                 <div class="footer-col">
-                    <h4>Explore More</h4>
+
+                    <h4>
+                        Explore More
+                    </h4>
+
                     <ul>
-                        <li><a href="#">Design</a></li>
-                        <li><a href="#">Primary</a></li>
-                        <li><a href="#">Connecting</a></li>
-                        <li><a href="#">BudgetBasics</a></li>
+
+                        <li>
+                            <a href="#">Design</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Primary</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Connecting</a>
+                        </li>
+
+                        <li>
+                            <a href="#">BudgetBasics</a>
+                        </li>
+
                     </ul>
+
                 </div>
+
 
                 <!-- Column 3: Resources & Feedback -->
+
                 <div class="footer-col">
-                    <h4>Resources & Feedback</h4>
+
+                    <h4>
+                        Resources & Feedback
+                    </h4>
+
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Comprehensive Sitemap</a></li>
+
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Comprehensive Sitemap</a>
+                        </li>
+
                     </ul>
+
                 </div>
+
 
                 <!-- Column 4: Connect With Us -->
+
                 <div class="footer-col">
-                    <h4>Connect With Us</h4>
+
+                    <h4>
+                        Connect With Us
+                    </h4>
+
                     <ul class="footer-contact-list">
-                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
-                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            jda.yazk@gmail.com
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            +234 123 4567
+                        </li>
+
                     </ul>
+
+
                     <div class="footer-socials">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Twitter"
+                        >
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
                     </div>
+
                 </div>
+
             </div>
 
+
             <!-- Bottom Disclaimer Bar -->
+
             <div class="footer-bottom">
-                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+
+                <p>
+                    EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.
+                </p>
+
             </div>
+
         </div>
+
     </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="/js/loader.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/chatbot_widget.js"></script>
     <script src="/js/feedback-prompt.js"></script>
+
 </body>
 
 </html>
