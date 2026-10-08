@@ -1,0 +1,413 @@
+.mm-page-wrapper {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+    background-color: var(--bg);
+}
+
+.mm-page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Intro Speech Bubble (Bee on Left) */
+.mm-intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+
+.mm-intro-bee {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.mm-speech-bubble {
+    position: relative;
+    background: var(--card);
+    border: 2px solid var(--navy);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.5;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(18, 35, 63, 0.05);
+}
+
+.mm-speech-bubble::before,
+.mm-speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    border-style: solid;
+}
+
+.mm-speech-bubble::before {
+    left: -14px;
+    border-width: 8px 14px 8px 0;
+    border-color: transparent var(--navy) transparent transparent;
+}
+
+.mm-speech-bubble::after {
+    left: -10px;
+    border-width: 6px 12px 6px 0;
+    border-color: transparent var(--card) transparent transparent;
+}
+
+/* Mistake vs. Solution card grid */
+.mm-mistake-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.mm-mistake-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem;
+    box-shadow: 0 2px 8px rgba(18, 35, 63, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.mm-row {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+}
+
+.mm-icon-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+
+.mm-icon-badge.mm-bad { background-color: var(--err); }
+.mm-icon-badge.mm-good { background-color: var(--save); }
+
+.mm-row-text h3 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.2rem;
+}
+
+.mm-row-text p {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.mm-vs-divider {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Calculator card (shared look with the 50-30-20 calculator) */
+.mm-calc-card {
+    background-color: var(--card);
+    border: 2px solid var(--navy);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 14px rgba(18, 35, 63, 0.06);
+}
+
+.mm-calc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.mm-calc-header .mm-calc-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mm-calc-card h2 {
+    font-size: 1.2rem;
+    color: var(--navy);
+}
+
+.mm-calc-instructions {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+.mm-field-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 0.5rem;
+}
+
+.mm-field label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mm-field input,
+.mm-field select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+    color: var(--navy);
+    background-color: var(--bg);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.mm-field input:focus,
+.mm-field select:focus {
+    border-color: var(--blue);
+}
+
+.mm-currency-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 0.8rem;
+    background-color: var(--bg);
+    transition: border-color 0.2s ease;
+}
+
+.mm-currency-field:focus-within {
+    border-color: var(--blue);
+}
+
+.mm-currency-field span {
+    color: var(--muted);
+    font-weight: 700;
+    margin-right: 0.3rem;
+}
+
+.mm-currency-field input {
+    border: none;
+    background: transparent;
+    padding: 0.7rem 0;
+}
+
+.mm-calc-btn-row {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mm-calc-btn {
+    border: none;
+    background-color: var(--blue);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.mm-calc-btn:hover {
+    background-color: var(--navy);
+    transform: translateY(-1px);
+}
+
+.mm-validation-msg {
+    color: var(--err);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    text-align: right;
+}
+
+/* Results */
+.mm-results {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+}
+
+.mm-results h3 {
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+}
+
+.mm-formula {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.mm-outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mm-outcome-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.mm-outcome-amount {
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.mm-outcome-amount.mm-spent { color: var(--err); }
+.mm-outcome-amount.mm-invested { color: var(--save); }
+
+.mm-outcome-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+.mm-bar-block {
+    margin-bottom: 1rem;
+}
+
+.mm-bar-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+}
+
+.mm-progress-track {
+    width: 100%;
+    height: 12px;
+    background-color: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mm-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.mm-fill-spent { background-color: var(--err); }
+.mm-fill-invested { background-color: var(--save); }
+
+/* Educational disclaimer */
+.mm-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    background-color: rgba(244, 201, 93, 0.18);
+    border: 1px solid rgba(244, 201, 93, 0.55);
+    color: var(--navy);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+}
+
+.mm-disclaimer i {
+    color: var(--warn);
+    margin-top: 0.15rem;
+}
+
+/* Next Activity Button */
+.mm-next-btn-container {
+    text-align: center;
+}
+
+.mm-next-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--save);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.mm-next-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .mm-intro-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mm-speech-bubble::before,
+    .mm-speech-bubble::after {
+        display: none;
+    }
+    .mm-calc-btn-row {
+        justify-content: stretch;
+    }
+    .mm-calc-btn {
+        width: 100%;
+    }
+    .mm-validation-msg {
+        text-align: left;
+    }
+}

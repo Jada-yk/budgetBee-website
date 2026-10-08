@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global styles, page-specific styles, and the chatbot widget -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/infographics.css">
+    <link rel="stylesheet" href="/css/chatbot_widget.css">
+    <link rel="stylesheet" href="/css/feedback-prompt.css">
+    <link rel="shortcut icon" href="/images/bee_logo.png" type="image/x-icon">
+
+    <title>Infographics & Cheat Sheets | BudgetBasics</title>
+</head>
+
+<body>
+
+    <!-- Styled Navbar Included -->
+    <header>
+        <nav>
+            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="budgetting_basic.html">Budgeting Basics</a></li>
+                <li><a href="needs-vs-want.html">Needs vs Wants</a></li>
+                <li><a href="50-30-20rule.html">50-30-20 Rule</a></li>
+                <li><a href="money-mistakes.html">Money Mistakes</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ig-page-wrapper reveal">
+
+        <h1 class="ig-page-title">VISUAL INFOGRAPHICS &amp; CHEAT SHEETS</h1>
+
+        <!-- Introduction Speech Bubble -->
+        <section class="ig-intro-section">
+            <img src="/images/bee_logo.png" alt="Budget Bee" class="ig-intro-bee" onerror="this.src='https://placehold.co/80x80/f4c95d/12233f?text=Bee'">
+            <div class="ig-speech-bubble">
+                Bzz! Welcome to the Visual Gallery!  Prefer learning with flowcharts and quick summaries?
+                Click any infographic card below to view the expanded cheat sheet!
+            </div>
+        </section>
+
+        <!-- Category Filter Pills -->
+        <section class="ig-filter-bar" role="group" aria-label="Filter infographics by category">
+            <button type="button" class="ig-filter-pill ig-active" data-filter="all">All Summaries</button>
+            <button type="button" class="ig-filter-pill" data-filter="budgeting">Budgeting</button>
+            <button type="button" class="ig-filter-pill" data-filter="savings">Savings</button>
+            <button type="button" class="ig-filter-pill" data-filter="traps">Money Traps</button>
+        </section>
+
+        <!-- 4-Card Visual Grid -->
+        <section class="ig-card-grid">
+
+            <div class="ig-card" data-category="budgeting">
+                <div class="ig-card-icon-header ig-bg-budgeting">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="ig-card-body">
+                    <span class="ig-card-tag">Budgeting</span>
+                    <h3>50-30-20 Budget Split</h3>
+                    <p>A quick visual of how to divide income across needs, wants, and savings.</p>
+                    <button type="button" class="ig-card-btn" data-modal="igModal5030">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> View Infographic
+                    </button>
+                </div>
+            </div>
+
+            <div class="ig-card" data-category="budgeting">
+                <div class="ig-card-icon-header ig-bg-budgeting">
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+                <div class="ig-card-body">
+                    <span class="ig-card-tag">Budgeting</span>
+                    <h3>Needs vs. Wants Decision Tree</h3>
+                    <p>A simple flowchart to help you decide if a purchase is essential right now.</p>
+                    <button type="button" class="ig-card-btn" data-modal="igModalTree">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> View Infographic
+                    </button>
+                </div>
+            </div>
+
+            <div class="ig-card" data-category="savings">
+                <div class="ig-card-icon-header ig-bg-savings">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="ig-card-body">
+                    <span class="ig-card-tag">Savings</span>
+                    <h3>Emergency Fund Step-Ladder</h3>
+                    <p>Four steps to build a cash buffer, from a starter fund to full financial security.</p>
+                    <button type="button" class="ig-card-btn" data-modal="igModalLadder">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> View Infographic
+                    </button>
+                </div>
+            </div>
+
+            <div class="ig-card" data-category="traps">
+                <div class="ig-card-icon-header ig-bg-traps">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="ig-card-body">
+                    <span class="ig-card-tag">Money Traps</span>
+                    <h3>4 Money Traps Matrix</h3>
+                    <p>A quick-reference grid of the most common student money mistakes to avoid.</p>
+                    <button type="button" class="ig-card-btn" data-modal="igModalTraps">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> View Infographic
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <p class="ig-no-results" id="igNoResults" hidden>No infographics match that filter yet.</p>
+
+        <!-- Bottom CTA -->
+        <section class="ig-home-btn-container">
+            <a href="index.html" class="ig-home-btn">
+                <i class="fa-solid fa-house"></i> BACK TO HOME HUB
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Modal overlay: shared backdrop, one panel per infographic -->
+    <div class="ig-modal-backdrop" id="igModalBackdrop" aria-hidden="true">
+        <div class="ig-modal-box" role="dialog" aria-modal="true">
+
+            <!-- 50-30-20 Budget Split -->
+            <div class="ig-modal-panel" id="igModal5030" hidden>
+                <button type="button" class="ig-modal-close" aria-label="Close">&times;</button>
+                <span class="ig-modal-tag">Budgeting</span>
+                <h3>50-30-20 Budget Split</h3>
+                <div class="ig-donut-row">
+                    <div class="ig-donut" role="img" aria-label="Donut chart: 50 percent needs, 30 percent wants, 20 percent savings"></div>
+                    <ul class="ig-legend">
+                        <li><span class="ig-legend-dot" style="background-color: var(--green);"></span> 50% Needs &mdash; rent, bills, groceries, transport</li>
+                        <li><span class="ig-legend-dot" style="background-color: var(--blue);"></span> 30% Wants &mdash; dining out, shopping, entertainment</li>
+                        <li><span class="ig-legend-dot" style="background-color: var(--yellow);"></span> 20% Savings &mdash; emergency fund, goals, debt payoff</li>
+                    </ul>
+                </div>
+                <p class="ig-modal-note">See the full interactive version, with your own numbers, on the <a href="/50-30-20-rule.html">50-30-20 Rule</a> page.</p>
+            </div>
+
+            <!-- Needs vs Wants Decision Tree -->
+            <div class="ig-modal-panel" id="igModalTree" hidden>
+                <button type="button" class="ig-modal-close" aria-label="Close">&times;</button>
+                <span class="ig-modal-tag">Budgeting</span>
+                <h3>Needs vs. Wants Decision Tree</h3>
+                <div class="ig-flow">
+                    <div class="ig-flow-box">New expense in mind?</div>
+                    <i class="fa-solid fa-arrow-down ig-flow-arrow"></i>
+                    <div class="ig-flow-box">Is it essential right now?</div>
+                    <i class="fa-solid fa-arrow-down ig-flow-arrow"></i>
+                    <div class="ig-flow-branches">
+                        <div class="ig-flow-branch ig-yes">
+                            <span class="ig-flow-branch-label">Yes</span>
+                            <div class="ig-flow-result">NEED &mdash; prioritize it in this month's budget</div>
+                        </div>
+                        <div class="ig-flow-branch ig-no">
+                            <span class="ig-flow-branch-label">No</span>
+                            <div class="ig-flow-result">WANT &mdash; delay it and revisit in 24 hours</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="ig-modal-note">Try this live with 8 real examples on the <a href="/needs-vs-wants.html">Needs vs Wants</a> quiz.</p>
+            </div>
+
+            <!-- Emergency Fund Step-Ladder -->
+            <div class="ig-modal-panel" id="igModalLadder" hidden>
+                <button type="button" class="ig-modal-close" aria-label="Close">&times;</button>
+                <span class="ig-modal-tag">Savings</span>
+                <h3>Emergency Fund Step-Ladder</h3>
+                <div class="ig-ladder">
+                    <div class="ig-ladder-step">
+                        <div class="ig-ladder-marker">
+                            <span class="ig-ladder-circle">1</span>
+                            <span class="ig-ladder-line"></span>
+                        </div>
+                        <div class="ig-ladder-text">
+                            <h4>Starter Fund</h4>
+                            <p>A small cash cushion (e.g. one month's transport + food) to absorb the first surprise expense.</p>
+                        </div>
+                    </div>
+                    <div class="ig-ladder-step">
+                        <div class="ig-ladder-marker">
+                            <span class="ig-ladder-circle">2</span>
+                            <span class="ig-ladder-line"></span>
+                        </div>
+                        <div class="ig-ladder-text">
+                            <h4>1 Month of Essentials</h4>
+                            <p>Enough saved to cover a full month of needs if income is delayed or interrupted.</p>
+                        </div>
+                    </div>
+                    <div class="ig-ladder-step">
+                        <div class="ig-ladder-marker">
+                            <span class="ig-ladder-circle">3</span>
+                            <span class="ig-ladder-line"></span>
+                        </div>
+                        <div class="ig-ladder-text">
+                            <h4>3 Months of Essentials</h4>
+                            <p>A solid buffer that covers most short-term emergencies without touching credit.</p>
+                        </div>
+                    </div>
+                    <div class="ig-ladder-step">
+                        <div class="ig-ladder-marker">
+                            <span class="ig-ladder-circle">4</span>
+                        </div>
+                        <div class="ig-ladder-text">
+                            <h4>6 Months of Essentials</h4>
+                            <p>Full financial security &mdash; enough to ride out a longer gap in income.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Money Traps Matrix -->
+            <div class="ig-modal-panel" id="igModalTraps" hidden>
+                <button type="button" class="ig-modal-close" aria-label="Close">&times;</button>
+                <span class="ig-modal-tag">Money Traps</span>
+                <h3>4 Money Traps Matrix</h3>
+                <div class="ig-trap-matrix">
+                    <div class="ig-trap-cell">
+                        <span class="ig-trap-icon"><i class="fa-solid fa-fire"></i></span>
+                        <div>
+                            <h4>Lifestyle Creep</h4>
+                            <p>Spending rises with income, so savings never grow.</p>
+                        </div>
+                    </div>
+                    <div class="ig-trap-cell">
+                        <span class="ig-trap-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <div>
+                            <h4>Impulse Buying</h4>
+                            <p>Frequent, unplanned small purchases add up fast.</p>
+                        </div>
+                    </div>
+                    <div class="ig-trap-cell">
+                        <span class="ig-trap-icon"><i class="fa-solid fa-credit-card"></i></span>
+                        <div>
+                            <h4>Minimum Payments</h4>
+                            <p>Only paying the minimum lets interest pile up.</p>
+                        </div>
+                    </div>
+                    <div class="ig-trap-cell">
+                        <span class="ig-trap-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        <div>
+                            <h4>No Emergency Buffer</h4>
+                            <p>Zero cash cushion forces reliance on credit.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="ig-modal-note">See the full breakdown, with fixes for each, on the <a href="/money-mistakes.html">Money Mistakes</a> page.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer (matches the rest of the site) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid reveal">
+                <div class="footer-col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Try</a></li>
+                        <li><a href="#">Understand</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore More</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Primary</a></li>
+                        <li><a href="#">Connecting</a></li>
+                        <li><a href="#">BudgetBasics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources & Feedback</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Comprehensive Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts & Chatbot Widget Include -->
+    <script src="/js/loader.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chatbot_widget.js"></script>
+    <script src="/js/feedback-prompt.js"></script>
+    <script src="/js/infographics.js"></script>
+</body>
+
+</html>

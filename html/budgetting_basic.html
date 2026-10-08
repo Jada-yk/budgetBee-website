@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global styles, page-specific styles, and the chatbot widget -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/budgetting_basic.css">
+    <link rel="stylesheet" href="/css/chatbot_widget.css">
+    <link rel="stylesheet" href="/css/feedback-prompt.css">
+    <link rel="shortcut icon" href="/images/bee_logo.png" type="image/x-icon">
+
+    <title>Budgeting Basics | BudgetBasics</title>
+</head>
+
+<body>
+
+    <!-- Styled Navbar Included -->
+    <header>
+        <nav>
+            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="budgetting_basic.html">Budgeting Basics</a></li>
+                <li><a href="needs-vs-want.html">Needs vs Wants</a></li>
+                <li><a href="50-30-20rule.html">50-30-20 Rule</a></li>
+                <li><a href="money-mistakes.html">Money Mistakes</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
+
+    <!-- Main Content Matching Figma Mockup -->
+    <main class="bb-page-wrapper reveal">
+
+        <h1 class="bb-page-title">BUDGETING BASICS</h1>
+
+        <!-- Introduction Speech Bubble -->
+        <section class="bb-intro-section">
+            <img src="/images/bee_logo.png" alt="Budget Bee" class="bb-intro-bee" onerror="this.src='https://placehold.co/80x80/f4c95d/12233f?text=Bee'">
+            <div class="bb-speech-bubble">
+                Hi I'm <strong>BudgetBee</strong>. Let's learn where your money comes from, where it goes, and look at a real example! Here is how a student might plan a <strong>₦100,000</strong> income.
+            </div>
+        </section>
+
+        <!-- 4-Card Educational Grid -->
+        <section class="bb-concept-grid">
+            <div class="bb-concept-card bg-income">
+                <h3>[ <i class="fa-solid fa-money-bill-wave"></i> ] INCOME</h3>
+                <p>Money received (e.g., allowance, part-time jobs)</p>
+            </div>
+
+            <div class="bb-concept-card bg-expenses">
+                <h3>[ <i class="fa-solid fa-cart-shopping"></i> ] FIXED vs VARIABLE EXPENSES</h3>
+                <p><strong>Fixed:</strong> Stays the same.<br><strong>Variable:</strong> Costs that change</p>
+            </div>
+
+            <div class="bb-concept-card bg-needs">
+                <h3>[ <i class="fa-solid fa-scale-balanced"></i> ] NEEDS vs WANTS</h3>
+                <p><strong>Need:</strong> Essential for life.<br><strong>Want:</strong> Enhances enjoyment</p>
+            </div>
+
+            <div class="bb-concept-card bg-savings">
+                <h3>[ <i class="fa-solid fa-piggy-bank"></i> ] SAVINGS</h3>
+                <p>Money set aside for the future or emergencies</p>
+            </div>
+        </section>
+
+        <!-- Budget Breakdown Table -->
+        <section class="bb-table-container">
+            <div class="bb-table-header">
+                SAMPLE MONTHLY STUDENT BUDGET (Income: ₦100,000)
+            </div>
+            <table class="bb-table">
+                <tbody>
+                    <tr>
+                        <td>Transport</td>
+                        <td>₦20,000</td>
+                        <td class="border-left">Entertainment</td>
+                        <td>₦8,000</td>
+                    </tr>
+                    <tr>
+                        <td>Food</td>
+                        <td>₦25,000</td>
+                        <td class="border-left">Shopping</td>
+                        <td>₦5,000</td>
+                    </tr>
+                    <tr>
+                        <td>Education</td>
+                        <td>₦10,000</td>
+                        <td class="border-left">Savings</td>
+                        <td>₦20,000</td>
+                    </tr>
+                    <tr>
+                        <td>Data / Airtime</td>
+                        <td>₦7,000</td>
+                        <td class="border-left">Miscellaneous</td>
+                        <td>₦5,000</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2" class="hide-mobile"></td>
+                        <td class="border-left" style="text-align: right;">TOTAL:</td>
+                        <td>₦100,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CTA Button -->
+        <section class="bb-next-btn-container">
+            <a href="needs-vs-want.html" class="bb-next-btn">
+                 NEXT: NEEDS vs WANTS ACTIVITY <i class="fa-solid fa-arrow-right"></i> 
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer (matches the rest of the site) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid reveal">
+                <div class="footer-col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Try</a></li>
+                        <li><a href="#">Understand</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore More</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Primary</a></li>
+                        <li><a href="#">Connecting</a></li>
+                        <li><a href="#">BudgetBasics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources & Feedback</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Comprehensive Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts & Chatbot Widget Include -->
+    <script src="/js/loader.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chatbot_widget.js"></script>
+    <script src="/js/feedback-prompt.js"></script>
+</body>
+
+</html>

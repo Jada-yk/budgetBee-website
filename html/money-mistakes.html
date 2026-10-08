@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global styles, page-specific styles, and the chatbot widget -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/money-mistakes.css">
+    <link rel="stylesheet" href="/css/chatbot_widget.css">
+    <link rel="stylesheet" href="/css/feedback-prompt.css">
+    <link rel="shortcut icon" href="/images/bee_logo.png" type="image/x-icon">
+
+    <title>Money Mistakes | BudgetBasics</title>
+</head>
+
+<body>
+
+    <!-- Styled Navbar Included -->
+    <header>
+        <nav>
+            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="budgetting_basic.html">Budgeting Basics</a></li>
+                <li><a href="needs-vs-want.html">Needs vs Wants</a></li>
+                <li><a href="50-30-20rule.html">50-30-20 Rule</a></li>
+                <li><a href="money-mistakes.html">Money Mistakes</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mm-page-wrapper reveal">
+
+        <h1 class="mm-page-title">COMMON MONEY MISTAKES TO AVOID</h1>
+
+        <!-- Introduction Speech Bubble -->
+        <section class="mm-intro-section">
+            <img src="/images/bee_logo.png" alt="Budget Bee" class="mm-intro-bee" onerror="this.src='https://placehold.co/80x80/f4c95d/12233f?text=Bee'">
+            <div class="mm-speech-bubble">
+                Hey, <strong>BudgetBee</strong> again! Even a good budget can leak money through a few common
+                habits. Here are four to watch for &mdash; and what to do instead.
+            </div>
+        </section>
+
+        <!-- Mistake vs. Solution Cards -->
+        <section class="mm-mistake-grid reveal">
+            <div class="mm-mistake-card">
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-bad"><i class="fa-solid fa-fire"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Lifestyle Creep</h3>
+                        <p>Spending increases as income grows, so savings never actually catch up.</p>
+                    </div>
+                </div>
+                <div class="mm-vs-divider">vs.</div>
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-good"><i class="fa-solid fa-check"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Save Your Raises</h3>
+                        <p>Automate a portion of every raise straight into savings before you get used to it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mm-mistake-card">
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-bad"><i class="fa-solid fa-cart-shopping"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Impulse Buying</h3>
+                        <p>Frequent, unbudgeted small purchases made without a second thought.</p>
+                    </div>
+                </div>
+                <div class="mm-vs-divider">vs.</div>
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-good"><i class="fa-solid fa-check"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Use a 24-Hour Wait Rule</h3>
+                        <p>Delay any purchase over $50 by a day &mdash; most urges pass on their own.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mm-mistake-card">
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-bad"><i class="fa-solid fa-credit-card"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Minimum Payments</h3>
+                        <p>Paying only the minimum lets high-interest credit card debt keep accumulating.</p>
+                    </div>
+                </div>
+                <div class="mm-vs-divider">vs.</div>
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-good"><i class="fa-solid fa-check"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Pay Off Balance in Full</h3>
+                        <p>Clearing the full balance monthly avoids interest charges entirely.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mm-mistake-card">
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-bad"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                    <div class="mm-row-text">
+                        <h3>No Emergency Buffer</h3>
+                        <p>Overspending on non-essentials leaves nothing set aside before an emergency hits.</p>
+                    </div>
+                </div>
+                <div class="mm-vs-divider">vs.</div>
+                <div class="mm-row">
+                    <span class="mm-icon-badge mm-good"><i class="fa-solid fa-building-columns"></i></span>
+                    <div class="mm-row-text">
+                        <h3>Build 3&ndash;6 Months of Essentials</h3>
+                        <p>A cash buffer creates real financial security when the unexpected happens.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impulse Purchase Impact Calculator -->
+        <section class="mm-calc-card reveal">
+            <div class="mm-calc-header">
+                <span class="mm-calc-icon"><i class="fa-solid fa-calculator"></i></span>
+                <h2>Impulse Purchase Impact Calculator</h2>
+            </div>
+            <p class="mm-calc-instructions">Calculate the true long-term opportunity cost of small recurring habits.</p>
+
+            <div class="mm-field-grid">
+                <div class="mm-field">
+                    <label for="mmItemName">Item / Habit Name</label>
+                    <input type="text" id="mmItemName" placeholder="e.g. Daily $6 Coffee">
+                </div>
+                <div class="mm-field">
+                    <label for="mmCost">Cost per Occurrence</label>
+                    <div class="mm-currency-field">
+                        <span>$</span>
+                        <input type="number" id="mmCost" min="0" step="any" placeholder="6.00">
+                    </div>
+                </div>
+                <div class="mm-field">
+                    <label for="mmFrequency">Frequency</label>
+                    <select id="mmFrequency">
+                        <option value="daily" selected>Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+                <div class="mm-field">
+                    <label for="mmHorizon">Time Horizon</label>
+                    <select id="mmHorizon">
+                        <option value="1" selected>1 Year</option>
+                        <option value="5">5 Years</option>
+                        <option value="10">10 Years</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mm-calc-btn-row">
+                <button type="button" class="mm-calc-btn" id="mmCalcBtn">CALCULATE IMPACT</button>
+            </div>
+            <p class="mm-validation-msg" id="mmValidation" role="alert" hidden>
+                Please enter a valid non-zero amount.
+            </p>
+
+            <!-- Results Area -->
+            <div class="mm-results" id="mmResults" hidden>
+                <h3>Financial Impact Summary</h3>
+                <p class="mm-formula" id="mmFormula">Formula Used: Direct Cost = Cost &times; Frequency &times; Time | Opportunity Cost (5% Compound Growth)</p>
+
+                <div class="mm-outcome-grid">
+                    <div class="mm-outcome-block">
+                        <span class="mm-outcome-label">Direct Total Outflow</span>
+                        <span class="mm-outcome-amount mm-spent" id="mmOutflowAmt">$0.00</span>
+                        <span class="mm-outcome-sub" id="mmOutflowSub"></span>
+                    </div>
+                    <div class="mm-outcome-block">
+                        <span class="mm-outcome-label">Potential Investment</span>
+                        <span class="mm-outcome-amount mm-invested" id="mmInvestedAmt">$0.00</span>
+                        <span class="mm-outcome-sub" id="mmInvestedSub"></span>
+                    </div>
+                </div>
+
+                <div class="mm-bar-block">
+                    <div class="mm-bar-row">
+                        <span>Direct Cost Spent</span>
+                        <span id="mmOutflowBarLabel">$0.00</span>
+                    </div>
+                    <div class="mm-progress-track">
+                        <div class="mm-progress-fill mm-fill-spent" id="mmOutflowBarFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="mm-bar-block">
+                    <div class="mm-bar-row">
+                        <span>Value If Invested</span>
+                        <span id="mmInvestedBarLabel">$0.00</span>
+                    </div>
+                    <div class="mm-progress-track">
+                        <div class="mm-progress-fill mm-fill-invested" id="mmInvestedBarFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="mm-disclaimer">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span><strong>Note:</strong> This tool provides educational estimates. Investment returns
+                        are illustrative and do not guarantee actual market performance.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Button -->
+        <section class="mm-next-btn-container">
+            <a href="infographics.html" class="mm-next-btn">
+                 NEXT:INFONOGRAFICS <i class="fa-solid fa-arrow-right"></i> 
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer (matches the rest of the site) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid reveal">
+                <div class="footer-col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Try</a></li>
+                        <li><a href="#">Understand</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore More</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Primary</a></li>
+                        <li><a href="#">Connecting</a></li>
+                        <li><a href="#">BudgetBasics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources & Feedback</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Comprehensive Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts & Chatbot Widget Include -->
+    <script src="/js/loader.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chatbot_widget.js"></script>
+    <script src="/js/feedback-prompt.js"></script>
+    <script src="/js/money-mistakes.js"></script>
+</body>
+
+</html>

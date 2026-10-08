@@ -1,0 +1,77 @@
+
+#bb-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: var(--bg, #F7F9FC);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+#bb-loader.bb-loader-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bb-loader-bee {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  animation: bb-loader-wobble 1.6s ease-in-out infinite;
+}
+
+@keyframes bb-loader-wobble {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(4deg) translateY(-6px); }
+}
+
+.bb-loader-text {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy, #12233F);
+  text-transform: lowercase;
+  letter-spacing: 0.3px;
+}
+
+.bb-loader-dots {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-top: 0.5rem;
+}
+
+.bb-loader-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background-color: var(--yellow, #F4C95D);
+  animation: bb-loader-dot-fade 1s linear infinite;
+}
+
+@keyframes bb-loader-dot-fade {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-loader-bee {
+    animation: none;
+  }
+  .bb-loader-dot {
+    animation: none;
+    opacity: 0.6;
+  }
+  #bb-loader {
+    transition: none;
+  }
+}

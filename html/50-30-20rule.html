@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global styles, page-specific styles, and the chatbot widget -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/50-30-20rule.css">
+    <link rel="stylesheet" href="/css/chatbot_widget.css">
+    <link rel="stylesheet" href="/css/feedback-prompt.css">
+    <link rel="shortcut icon" href="/images/bee_logo.png" type="image/x-icon">
+
+    <title>50-30-20 Rule | BudgetBasics</title>
+</head>
+
+<body>
+
+    <!-- Styled Navbar Included -->
+    <header>
+        <nav>
+            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="budgetting_basic.html">Budgeting Basics</a></li>
+                <li><a href="needs-vs-want.html">Needs vs Wants</a></li>
+                <li><a href="50-30-20rule.html">50-30-20 Rule</a></li>
+                <li><a href="money-mistakes.html">Money Mistakes</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="fr-page-wrapper reveal">
+
+        <h1 class="fr-page-title">THE 50-30-20 RULE</h1>
+
+        <!-- Introduction Speech Bubble -->
+        <section class="fr-intro-section">
+            <img src="/images/bee_logo.png" alt="Budget Bee" class="fr-intro-bee" onerror="this.src='https://placehold.co/80x80/f4c95d/12233f?text=Bee'">
+            <div class="fr-speech-bubble">
+                Hi, <strong>BudgetBee</strong> here again! Now that you know needs from wants, let's talk about a
+                simple way to split any income: the <strong>50-30-20 rule</strong>. Try it below with your own
+                numbers.
+            </div>
+        </section>
+
+        <!-- Educational Intro: split explanation + donut chart -->
+        <section class="fr-hero-grid reveal">
+            <div class="fr-hero-text">
+                <h2>A simple, effective way to divide your income</h2>
+                <ul class="fr-split-list">
+                    <li>
+                        <span class="fr-dot fr-dot-needs"></span>
+                        <span>
+                            <strong>50% Needs</strong>
+                            Essentials like rent, bills, groceries, and transportation.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fr-dot fr-dot-wants"></span>
+                        <span>
+                            <strong>30% Wants</strong>
+                            Fun and leisure, including dining out, shopping, and entertainment.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fr-dot fr-dot-savings"></span>
+                        <span>
+                            <strong>20% Savings</strong>
+                            Future goals, emergency funds, and debt repayment.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="fr-donut-wrap">
+                <div class="fr-donut" role="img" aria-label="Donut chart showing 50 percent needs, 30 percent wants, 20 percent savings">
+                    <div class="fr-donut-center">50/30/20<span>Split</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator -->
+        <section class="fr-calc-card reveal">
+            <h2>Try the Calculator</h2>
+            <p class="fr-calc-instructions">Enter a sample monthly income below to see how it splits under this rule.</p>
+
+            <label class="fr-input-label" for="frIncome">Monthly After-Tax Income</label>
+            <div class="fr-input-row">
+                <div class="fr-input-field">
+                    <span>&#8358;</span>
+                    <input type="number" id="frIncome" inputmode="decimal" min="0" step="any" placeholder="e.g. 100000" aria-describedby="frValidation">
+                </div>
+                <button type="button" class="fr-calc-btn" id="frCalcBtn">Calculate My Budget</button>
+            </div>
+            <p class="fr-validation-msg" id="frValidation" role="alert" hidden>
+                &#9888;&#65039; Please enter a valid numerical amount greater than zero.
+            </p>
+
+            <!-- Results Area -->
+            <div class="fr-results" id="frResults" hidden>
+                <h3>Your Budget Estimate</h3>
+                <p class="fr-formula">Income &times; 0.50 (Needs) &nbsp;|&nbsp; Income &times; 0.30 (Wants) &nbsp;|&nbsp; Income &times; 0.20 (Savings)</p>
+
+                <div class="fr-result-grid">
+                    <div class="fr-result-item fr-needs">
+                        <span class="fr-result-label">Needs (50%)</span>
+                        <span class="fr-result-amount" id="frNeedsAmt">&#8358;0</span>
+                        <div class="fr-progress-track">
+                            <div class="fr-progress-fill fr-fill-needs" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="fr-result-item fr-wants">
+                        <span class="fr-result-label">Wants (30%)</span>
+                        <span class="fr-result-amount" id="frWantsAmt">&#8358;0</span>
+                        <div class="fr-progress-track">
+                            <div class="fr-progress-fill fr-fill-wants" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="fr-result-item fr-savings">
+                        <span class="fr-result-label">Savings (20%)</span>
+                        <span class="fr-result-amount" id="frSavingsAmt">&#8358;0</span>
+                        <div class="fr-progress-track">
+                            <div class="fr-progress-fill fr-fill-savings" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fr-disclaimer">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span><strong>Note:</strong> This result is an estimate for learning purposes only. The
+                        50-30-20 split is an educational guideline and may be adjusted to fit your own
+                        financial situation.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Button -->
+        <section class="fr-next-btn-container">
+            <a href="money-mistakes.html" class="fr-next-btn">
+                 NEXT:MONEY MISTAKES <i class="fa-solid fa-arrow-right"></i> 
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer (matches the rest of the site) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid reveal">
+                <div class="footer-col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Try</a></li>
+                        <li><a href="#">Understand</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore More</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Primary</a></li>
+                        <li><a href="#">Connecting</a></li>
+                        <li><a href="#">BudgetBasics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources & Feedback</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Comprehensive Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts & Chatbot Widget Include -->
+    <script src="/js/loader.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chatbot_widget.js"></script>
+    <script src="/js/feedback-prompt.js"></script>
+    <script src="/js/50-30-20rule.js"></script>
+</body>
+
+</html>

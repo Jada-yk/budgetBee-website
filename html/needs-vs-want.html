@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global styles, page-specific styles, and the chatbot widget -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/needs-vs-wants.css">
+    <link rel="stylesheet" href="/css/chatbot_widget.css">
+    <link rel="stylesheet" href="/css/feedback-prompt.css">
+    <link rel="shortcut icon" href="images/bee_logo.png" type="image/x-icon">
+
+    <title>Needs vs Wants | BudgetBasics</title>
+</head>
+
+<body>
+
+    <!-- Styled Navbar Included -->
+    <header>
+        <nav>
+            <h1 class="nav-logo"><strong>Budget</strong>basics</h1>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="budgetting_basic.html">Budgeting Basics</a></li>
+                <li><a href="needs-vs-want.html">Needs vs Wants</a></li>
+                <li><a href="50-30-20rule.html">50-30-20 Rule</a></li>
+                <li><a href="money-mistakes.html">Money Mistakes</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+            </ul>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="nw-page-wrapper reveal">
+
+        <h1 class="nw-page-title">NEEDS VS WANTS</h1>
+
+        <!-- Bee Intro: explains what the activity is -->
+        <section class="nw-intro-section">
+            <img src="/images/bee_logo.png" alt="Budget Bee" class="nw-intro-bee" onerror="this.src='https://placehold.co/80x80/f4c95d/12233f?text=Bee'">
+            <div class="nw-speech-bubble">
+                Hi, it's me again — <strong>BudgetBee</strong>! Now let's test what you know. I'll show you <strong>8 everyday expenses</strong> and you decide: is it a <strong>NEED</strong> or a <strong>WANT</strong>? Pick an answer for each one, and I'll tell you right away whether you got it and why. Ready? Let's go!
+            </div>
+        </section>
+
+        <!-- Breather: explain the two concepts again before the quiz -->
+        <section class="nw-explain-grid">
+            <div class="nw-explain-card nw-bg-need">
+                <h3>[ <i class="fa-solid fa-house"></i> ] NEED</h3>
+                <p>Something you can't reasonably do without  it keeps you fed, housed, healthy, or able to earn a living.</p>
+                <ul>
+                    <li>Rent or housing costs</li>
+                    <li>Food and groceries</li>
+                    <li>Transport to work or school</li>
+                    <li>Medicine and healthcare</li>
+                </ul>
+            </div>
+            <div class="nw-explain-card nw-bg-want">
+                <h3>[ <i class="fa-solid fa-bag-shopping"></i> ] WANT</h3>
+                <p>Something nice to have that makes life more enjoyable, but you could still get by without it.</p>
+                <ul>
+                    <li>Newest gadgets and upgrades</li>
+                    <li>Eating out and entertainment</li>
+                    <li>Designer or branded items</li>
+                    <li>Streaming and other subscriptions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="nw-quiz-section">
+            <p class="nw-quiz-progress">Question <span id="nwCurrent">1</span> of <span id="nwTotal">8</span></p>
+
+            <span class="nw-quiz-badge">Is this a...</span>
+            <h3 class="nw-quiz-item" id="nwItemText">Loading question...</h3>
+
+            <div class="nw-quiz-buttons">
+                <button type="button" class="nw-choice-box nw-need-btn" data-choice="need">
+                    <span class="nw-choice-face nw-face-front">
+                        <span class="nw-choice-img-wrap">
+                            <img src="/images/need-option.jpg" alt="Need" onerror="this.src='https://placehold.co/300x220/dcfce7/12233f?text=NEED'">
+                        </span>
+                        <span class="nw-choice-label">NEED</span>
+                    </span>
+                    <span class="nw-choice-face nw-face-info" id="nwNeedInfo" hidden>
+                        <span class="nw-info-label">NEED</span>
+                        <span class="nw-info-verdict"></span>
+                        <span class="nw-info-text"></span>
+                    </span>
+                </button>
+                <button type="button" class="nw-choice-box nw-want-btn" data-choice="want">
+                    <span class="nw-choice-face nw-face-front">
+                        <span class="nw-choice-img-wrap">
+                            <img src="/images/want-option.jpg" alt="Want" onerror="this.src='https://placehold.co/300x220/fef08a/12233f?text=WANT'">
+                        </span>
+                        <span class="nw-choice-label">WANT</span>
+                    </span>
+                    <span class="nw-choice-face nw-face-info" id="nwWantInfo" hidden>
+                        <span class="nw-info-label">WANT</span>
+                        <span class="nw-info-verdict"></span>
+                        <span class="nw-info-text"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="nw-quiz-actions">
+                <button type="button" class="nw-next-btn" id="nwNextBtn" hidden>
+                    Next question <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="nw-results-actions" id="nwResultsActions" hidden>
+                    <button type="button" class="nw-retry-btn" id="nwRetryBtn">
+                        <i class="fa-solid fa-rotate-left"></i> Try again
+                    </button>
+                    <a href="50-30-20rule.html" class="nw-cta-btn">
+                        NEXT: 50-30-20 RULE <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (matches the rest of the site) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid reveal">
+                <div class="footer-col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Try</a></li>
+                        <li><a href="#">Understand</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore More</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Primary</a></li>
+                        <li><a href="#">Connecting</a></li>
+                        <li><a href="#">BudgetBasics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources & Feedback</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Comprehensive Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> jda.yazk@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +234 123 4567</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>EDUCATIONAL PROJECT. NOT FINANCIAL ADVICE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts & Chatbot Widget Include -->
+    <script src="/js/loader.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chatbot_widget.js"></script>
+    <script src="/js/feedback-prompt.js"></script>
+    <script src="/js/needs-vs-wants.js"></script>
+</body>
+
+</html>

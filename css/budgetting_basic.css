@@ -1,0 +1,221 @@
+
+/* Page Layout & Container */
+.bb-page-wrapper {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+    background-color: var(--bg);
+}
+
+.bb-page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Intro Speech Bubble (Bee on Left) */
+.bb-intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+
+.bb-intro-bee {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.bb-speech-bubble {
+    position: relative;
+    background: var(--card);
+    border: 2px solid var(--navy);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.5;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(18, 35, 63, 0.05);
+}
+
+.bb-speech-bubble::before,
+.bb-speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    border-style: solid;
+}
+
+.bb-speech-bubble::before {
+    left: -14px;
+    border-width: 8px 14px 8px 0;
+    border-color: transparent var(--navy) transparent transparent;
+}
+
+.bb-speech-bubble::after {
+    left: -10px;
+    border-width: 6px 12px 6px 0;
+    border-color: transparent var(--card) transparent transparent;
+}
+
+/* 4-Card Concept Grid */
+.bb-concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.bb-concept-card {
+    padding: 1.25rem;
+    border-radius: 10px;
+    color: var(--navy);
+    border: 1px solid rgba(18, 35, 63, 0.1);
+    box-shadow: 0 2px 8px rgba(18, 35, 63, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bb-concept-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bb-concept-card h3 i {
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin: 0 0.1rem;
+}
+
+.bb-concept-card p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Figma Mockup Pastel Colors */
+.bg-income { background-color: #dcfce7; }
+.bg-expenses { background-color: #fef08a; }
+.bg-needs { background-color: #f3e8ff; }
+.bg-savings { background-color: #ffe4e6; }
+
+/* Budget Table */
+.bb-table-container {
+    border: 2px solid #94a3b8;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    background-color: var(--card);
+}
+
+.bb-table-header {
+    background-color: #93c5fd; /* Soft Blue */
+    color: var(--navy);
+    font-weight: 700;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #94a3b8;
+}
+
+.bb-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bb-table td {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: var(--navy);
+    border-bottom: 1px solid var(--border);
+}
+
+.bb-table td:nth-child(even) {
+    text-align: right;
+    font-weight: 600;
+}
+
+.bb-table .border-left {
+    border-left: 2px solid #94a3b8;
+}
+
+.bb-table .total-row td {
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-bottom: none;
+    background-color: rgba(247, 249, 252, 0.5);
+}
+
+/* Next Activity Button */
+.bb-next-btn-container {
+    text-align: center;
+}
+
+.bb-next-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--save); /* Green from style.css */
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.bb-next-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .bb-intro-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bb-speech-bubble::before, .bb-speech-bubble::after {
+        display: none; /* Hide arrow tail on mobile stack */
+    }
+    .bb-speech-container {
+        overflow-x: auto;
+    }
+    /* Restructure table for narrow screens */
+    .bb-table, .bb-table tbody, .bb-table tr {
+        display: block;
+        width: 100%;
+    }
+    .bb-table td {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed var(--border);
+    }
+    .bb-table td:nth-child(even) {
+        text-align: right;
+    }
+    .bb-table .border-left {
+        border-left: none;
+        border-top: 1px dashed var(--border);
+    }
+    .total-row .hide-mobile {
+        display: none !important;
+    }
+}
