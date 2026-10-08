@@ -39,21 +39,16 @@ body{
   white-space: nowrap;
 }
 
-nav {
+nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem 1.5rem;
   background-color: var(--navy);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
+  position: relative;
   gap: 1rem;
 }
+
 .nav-toggle{
   display: none;
   background: none;
